@@ -12,7 +12,12 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(ChromiumCacheViewer main.cpp)
+add_executable(ChromiumCacheViewer
+        main.cpp
+        model.cpp
+        model.h
+)
+
 target_link_libraries(ChromiumCacheViewer
         Qt::Core
         Qt::Gui

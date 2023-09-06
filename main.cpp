@@ -1,12 +1,16 @@
 #include <QApplication>
-#include <QPushButton>
+#include <QTableView>
+
+#include "model.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    QPushButton  button("Hello world!", nullptr);
+    QTableView   tableView;
+    Model        model;
 
-    button.resize(200, 100);
-    button.show();
+    tableView.setModel(&model);
+    tableView.resize(400, 300);
+    tableView.show();
 
     return QApplication::exec();
 }
